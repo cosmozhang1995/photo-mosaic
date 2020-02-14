@@ -1,5 +1,5 @@
 import os
-import config_utils
+from . import config_utils
 
 __conf_dict = config_utils.read_conf_opts(
 		config_utils.read_conf_file(

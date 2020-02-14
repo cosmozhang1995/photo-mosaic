@@ -1,8 +1,8 @@
 import os
 import cv2
 import numpy as np
-import config as c
-from imgutils import resize_cut
+from . import config as c
+from .imgutils import resize_cut
 import random
 import progressbar
 
@@ -22,7 +22,7 @@ def mosaic(template_image_path, inputs, output_path=None):
 	if isinstance(inputs, dict):
 		images = inputs
 	elif os.path.isdir(inputs):
-		from preprocess import preprocess
+		from .preprocess import preprocess
 		images = preprocess(inputs)
 	elif inputs.isfile(inputs) and inputs.split(".")[-1].lower() == "mat":
 		from scipy.io import loadmat

@@ -1,5 +1,5 @@
 import sys
-from mosaic import mosaic
+from photomosaic.mosaic import mosaic
 import getopt
 
 opts, args = getopt.getopt(sys.argv[1:], "t:i:o:", ["template=", "input=", "output="])

@@ -1,8 +1,8 @@
 import os
 import cv2
 import numpy as np
-import config as c
-from imgutils import resize_cut
+from . import config as c
+from .imgutils import resize_cut
 import progressbar
 
 # preprocess: Read the pieces in @srcdir, cut&resize them
